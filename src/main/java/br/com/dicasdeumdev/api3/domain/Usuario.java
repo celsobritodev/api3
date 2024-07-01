@@ -1,4 +1,4 @@
-package domain;
+package br.com.dicasdeumdev.api3.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class User {
+public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +22,31 @@ public class User {
 	@Column(unique=true)
 	private String email;
 	private String password;
+	
+	
+	
+	public Usuario(Integer id, String name, String email, String password) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+	}
 
 
-}
+
+	public Usuario() {
+		super();
+	}
+	
+	
+	
+	
+	
+	
+	
+
+	}
+
+
+
